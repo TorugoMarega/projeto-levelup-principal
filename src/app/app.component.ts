@@ -67,6 +67,12 @@ export class AppComponent {
       this.user.university = data.findUserById.collegeInformation.course.university.name
       this.user.mood = data.findUserById.userMood
       this.user.age = this.getAge(this.user.birthdate)
+
+      this.user.competencias_fortes=""
+      this.user.competencias_fracas=""
+      this.user.hobbies =""
+      this.user.especialidades=""
+
       for(let i = 0; i<data.findUserById.strongWeakSkills.length; i++){
         if(data.findUserById.strongWeakSkills[i].type =="STRONG"){
           this.user.competencias_fortes=data.findUserById.strongWeakSkills[i].skill;
@@ -77,8 +83,8 @@ export class AppComponent {
       this.user.especialidades += data.findUserById.specialties[0].speciality;
 
 
-      /* console.log("hobbies: "+ this.user.hobbies);
-      console.log("especialidades: " +this.user.especialidades); */
+      console.log("hobbies: "+ this.user.hobbies);
+      console.log("especialidades: " +this.user.especialidades);
       return this.user;
     })
 

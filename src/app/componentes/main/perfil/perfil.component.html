@@ -138,11 +138,11 @@
                         <div class="div-skills">
                             <label class="ff-silkscreen font-skills" for="">Métodos Ágeis</label>
                             <div>
-                                <button class="btn" data-controle="-">
+                                <button class="btn" data-controle="-" (click)="minus(valor.value)">
                                     <img src="../../../../assets/imagem/seta esquerda.svg">
                                 </button>
-                                <input type="text" class="ff-silkscreen controle-contador" value="0" data-contador>
-                                <button class="btn" data-controle="+">
+                                <input #valor type="text" class="ff-silkscreen controle-contador"/>
+                                <button class="btn" data-controle="+" (click)="plus(valor.value)">
                                     <img src="../../../../assets/imagem/seta direita.svg">
                                 </button>
                             </div>
@@ -203,7 +203,7 @@
                                 </button>
                                 <input type="text" class="ff-silkscreen controle-contador" value="0" data-contador>
                                 <button class="btn" data-controle="+">
-                                    <img src="../../../../assets/imagem/seta direita.svg">
+                                    <img  src="../../../../assets/imagem/seta direita.svg">
                                 </button>
                             </div>
 
